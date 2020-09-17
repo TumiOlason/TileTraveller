@@ -1,90 +1,90 @@
-position = "1,1"
+position = 11
 n = "(N)orth"
 e = "(E)ast"
 w = "(W)est"
 s = "(S)outh"
-while position != "3,1":
-    if position == "1,1":
+while position != 31 :
+    if position == 11:
         print("You can travel: {}.".format(n))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "n":
-            position = "1,2"
+            position += 1
         else:
             print("Not a valid direction!")
 
-    elif position == "1,2":
+    elif position == 12:
         print("You can travel: {} or {} or {}.".format(n,e,s))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "n":
-            position = "1,3"
+            position += 1
         elif choice == "s":
-            position = "1,1"
+            position -= 1
         elif choice == "e":
-            position = "2,2"
+            position += 10
         else:
             print("Not a valid direction!")
-    elif position == "1,3":
+    elif position == 13:
         print("You can travel: {} or {}.".format(e,s))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "s":
-            position = "1,2"
+            position -= 1
         elif choice == "e":
-            position = "2,3"
+            position += 10
         else:
             print("Not a valid direction!")
 
-    elif position == "2,1":
+    elif position == 21:
         print("You can travel: {}.".format(n))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "n":
-            position = "2,2"
+            position += 1
         else:
             print("Not a valid direction!")
 
-    elif position == "2,2":
+    elif position == 22:
         print("You can travel: {} or {}.".format(s,w))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "w":
-            position = "1,2"
+            position -= 10
         elif choice == "s":
-            position = "2,1"
+            position += 1
         else:
             print("Not a valid direction!")
 
-    elif position == "2,3":
+    elif position == 23:
         print("You can travel: {} or {}.".format(e,w))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "w":
-            position = "1,3"
+            position -= 10
         elif choice == "e":
-            position = "3,3"
+            position += 10
         else:
             print("Not a valid direction!")
-    elif position == "3,3":
+    elif position == 33:
         print("You can travel: {} or {}.".format(s,w))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "s":
-            position = "3,2"
+            position -= 1
         elif choice == "w":
-            position = "2,3"
+            position -= 10
         else:
             print("Not a valid direction!")
 
-    elif position == "3,2":
+    elif position == 32:
         print("You can travel: {} or {}.".format(n,s))
         choice = input("Direction: ")
         choice = choice.lower()
         if choice == "n":
-            position = "3,3"
+            position += 1
         elif choice == "s":
-            position = "3,1"
+            position -= 1
         else:
             print("Not a valid direction!")
 print("Victory!")
