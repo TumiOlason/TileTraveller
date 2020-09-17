@@ -1,5 +1,6 @@
 #https://github.com/TumiOlason/TileTraveller
-#
+#we intend on using atleast two different functions to see if the step we want to take is allowed and then go those steps
+#We then will be using if statements for each position of the 3x3 grid.
 
 def position_changer(number,position,allowed):
     number = number.lower()
@@ -20,13 +21,13 @@ def position_allowed(position):
     if position == 11:
         return "n"
     elif position == 12:
-        return "ns"
+        return "nse"
     elif position == 13:
         return "es"
     elif position ==21:
         return "n"
     elif position == 22:
-        return "sn"
+        return "sw"
     elif position ==23:
         return "ew"
     elif position==32:
